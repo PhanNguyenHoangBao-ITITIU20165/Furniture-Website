@@ -13,21 +13,21 @@ const { Text } = Typography;
 export const Footer = (props: Props) => {
     const { token } = theme.useToken();
     return (
-        <Flex style={{ flexDirection: 'column' }}>
+        <Flex style={{ flexDirection: 'column', backgroundColor: '' }}>
             <Flex
                 style={{
                     // width: '100%',
                     height: '200px',
                     justifyContent: 'space-around',
-                    backgroundColor: customColors.colorBgSecondary,
+                    backgroundColor: '#ffbf00',
                     marginTop: '50px',
                 }}
             >
                 <Row style={{ gap: '10px', alignItems: 'center' }}>
                     <img src={assets.highQuality} style={{ width: '60px', height: '60px' }} alt="" />
-                    <Flex style={{ flexDirection: 'column' }}>
+                    <Flex style={{ flexDirection: 'column',  }}>
                         <Text style={{ fontSize: '25px', fontWeight: '600' }}>High Quality</Text>
-                        <Text style={{ fontSize: '20px', fontWeight: '500', color: customColors.lightGrayColor }}>
+                        <Text style={{ fontSize: '20px', fontWeight: '500', color: 'white' }}>
                             Crafted from top materials
                         </Text>
                     </Flex>
@@ -36,7 +36,7 @@ export const Footer = (props: Props) => {
                     <img src={assets.warrantyProtection} style={{ width: '60px', height: '60px' }} alt="" />
                     <Flex style={{ flexDirection: 'column' }}>
                         <Text style={{ fontSize: '25px', fontWeight: '600' }}>Warranty Protection</Text>
-                        <Text style={{ fontSize: '20px', fontWeight: '500', color: customColors.lightGrayColor }}>
+                        <Text style={{ fontSize: '20px', fontWeight: '500', color: 'white' }}>
                             Over 2 years
                         </Text>
                     </Flex>
@@ -45,7 +45,7 @@ export const Footer = (props: Props) => {
                     <img src={assets.freeShipping} style={{ width: '60px', height: '60px' }} alt="" />
                     <Flex style={{ flexDirection: 'column' }}>
                         <Text style={{ fontSize: '25px', fontWeight: '600' }}>Free Shipping</Text>
-                        <Text style={{ fontSize: '20px', fontWeight: '500', color: customColors.lightGrayColor }}>
+                        <Text style={{ fontSize: '20px', fontWeight: '500', color: 'white' }}>
                             Order over $150
                         </Text>
                     </Flex>
@@ -54,7 +54,7 @@ export const Footer = (props: Props) => {
                     <img src={assets.support} style={{ width: '60px', height: '60px' }} alt="" />
                     <Flex style={{ flexDirection: 'column' }}>
                         <Text style={{ fontSize: '25px', fontWeight: '600' }}>24/7 Support</Text>
-                        <Text style={{ fontSize: '20px', fontWeight: '500', color: customColors.lightGrayColor }}>
+                        <Text style={{ fontSize: '20px', fontWeight: '500', color: 'white' }}>
                             Dedicated support
                         </Text>
                     </Flex>
@@ -66,7 +66,7 @@ export const Footer = (props: Props) => {
                 <Col span={6}>
                     <Flex style={{ flexDirection: 'column', alignItems: 'center' }}>
                         <Image src={assets.logoImage} alt="" preview={false} style={{ width: '80px' }} />
-                        <Text style={{ fontSize: '24px', fontWeight: '700' }}>FurniScape</Text>
+                        <Text style={{ fontSize: '24px', fontWeight: '700' }}>True WellnessWay</Text>
                         <Text
                             style={{
                                 fontSize: '16px',

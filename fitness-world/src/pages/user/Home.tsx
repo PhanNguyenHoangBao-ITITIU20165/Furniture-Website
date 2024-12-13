@@ -43,7 +43,7 @@ export const HomePage = () => {
     const highlightProducts = productsInStock.slice(0, 8);
 
     return (
-        <Flex style={{ flexDirection: 'column', width: '100%', alignItems: 'center', paddingTop: `${navBarHeight}` }}>
+        <Flex style={{ flexDirection: 'column', width: '100%', alignItems: 'center', paddingTop: `${navBarHeight}`, backgroundColor: 'black' }}>
             <Flex style={{ position: 'relative' }}>
                 <div style={{ width: '100%' }}>
                     <Image style={{ width: '100%' }} preview={{ mask: null }} src={assets.banner} alt="Banner" />
@@ -52,12 +52,13 @@ export const HomePage = () => {
                     style={{
                         position: 'absolute',
                         flexDirection: 'column',
-                        backgroundColor: '#FFF3E3',
+                        backgroundColor: '#FFFAA0',
                         width: '500px',
                         left: '80%',
                         top: '5%',
                         borderRadius: '10px',
                         padding: '30px 50px',
+                        border: '5px solid #ffbf00',
                     }}
                 >
                     <Text style={{ fontSize: '16px', fontWeight: '600', letterSpacing: '3px' }}>New Arrival</Text>
@@ -109,7 +110,7 @@ export const HomePage = () => {
                     style={{
                         fontSize: '32px',
                         fontWeight: '700',
-                        color: customColors.colorTertiaryText,
+                        color: 'white',
                         margin: '0',
                     }}
                 >
@@ -119,11 +120,11 @@ export const HomePage = () => {
                     style={{
                         fontSize: '20px',
                         fontWeight: '400',
-                        color: customColors.colorQuaternaryText,
+                        color: 'white',
                         margin: '0',
                     }}
                 >
-                    Fuel Your Fitness, Embrace Your Wellness.
+                    Fuel Your Fitness, Embrace Your Wellness
                 </Text>
                 <Row style={{ justifyContent: 'space-around', width: '100%', marginTop: '20px' }}>
                     <Col
@@ -189,7 +190,7 @@ export const HomePage = () => {
                     style={{
                         fontSize: '40px',
                         fontWeight: '700',
-                        color: customColors.colorTertiaryText,
+                        color: 'white',
                         marginTop: '20px',
                     }}
                 >
@@ -199,15 +200,15 @@ export const HomePage = () => {
                 <Link to="/shop">
                     <Button
                         style={{
-                            backgroundColor: '#fff',
-                            color: token.colorPrimary,
+                            color: 'black',
+                            backgroundColor: '#fffaa0',
                             fontWeight: '600',
                             fontSize: '16px',
                             textAlign: 'center',
                             width: '250px',
                             height: '50px',
                             marginTop: '50px',
-                            border: `2px solid ${token.colorPrimary}`,
+                            border: `5px solid #ffbf00`,
                         }}
                     >
                         Show more
@@ -215,16 +216,6 @@ export const HomePage = () => {
                 </Link>
             </Flex>
             <Flex style={{ flexDirection: 'column', alignItems: 'center', marginTop: '70px' }}>
-                <Text
-                    style={{
-                        fontSize: '20px',
-                        fontWeight: '600',
-                        margin: '0',
-                        color: customColors.colorQuaternaryText,
-                    }}
-                >
-                    Share your setup with
-                </Text>
                 <Text style={{ fontSize: '40px', fontWeight: '700', margin: '0px 0 20px 0' }}>
                     #FurniScapeFurniture
                 </Text>

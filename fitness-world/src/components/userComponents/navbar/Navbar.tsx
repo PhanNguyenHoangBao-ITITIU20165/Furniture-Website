@@ -85,11 +85,12 @@ export const Navbar = () => {
                     margin: '0',
                     zIndex: '50',
                     width: '100%',
-                    backgroundColor: '#fff',
+                    background: 'linear-gradient(to bottom, #ffbf00, black)',
                     top: '0',
                     boxShadow: '0 0 10px rgba(0,0,0,0.2)',
                 }}
             >
+
                 <Col className="navbar_logo" span={6}>
                     <Link to="/">
                         <img src={assets.logo} alt="logo" width={75} style={{padding: ' 0 0 0 20px'}}/>
@@ -98,21 +99,21 @@ export const Navbar = () => {
 
                 <Col className="navbar_navigation" span={12} style={{ display: 'flex', justifyContent: 'center' }}>
                     <Menu
-                        style={{ fontSize: '16px', fontWeight: '600', backgroundColor: '#fff' }}
+                        style={{ fontSize: '16px', fontWeight: '600', background: 'linear-gradient(to bottom, #ffbf00, black)', marginTop: '-7px' }}
                         theme="light"
                         mode="horizontal"
                         selectedKeys={[selectedPath]}
                     >
-                        <MenuItem key="home" style={{ margin: '0 30px', padding: '0 30px', fontSize: '18px' }}>
+                        <MenuItem key="home" style={{ margin: '10px 30px 0 30px', padding: '0 30px', fontSize: '22px', color:'white' }}>
                             <Link to="/">Home</Link>
                         </MenuItem>
-                        <MenuItem key="shop" style={{ margin: '0 30px', padding: '0 30px', fontSize: '18px' }}>
+                        <MenuItem key="shop" style={{ margin: '10px 30px 0 30px', padding: '0 30px', fontSize: '22px', color:'white' }}>
                             <Link to="/shop">Shop</Link>
                         </MenuItem>
-                        <MenuItem key="about" style={{ margin: '0 30px', padding: '0 30px', fontSize: '18px' }}>
+                        <MenuItem key="about" style={{ margin: '10px 30px 0 30px', padding: '0 30px', fontSize: '22px', color:'white' }}>
                             <Link to="/about">About</Link>
                         </MenuItem>
-                        <MenuItem key="contact" style={{ margin: '0 30px', padding: '0 30px', fontSize: '18px' }}>
+                        <MenuItem key="contact" style={{ margin: '10px 30px 0 30px', padding: '0 30px', fontSize: '22px', color:'white' }}>
                             <Link to="/contact">Contact</Link>
                         </MenuItem>
                     </Menu>
