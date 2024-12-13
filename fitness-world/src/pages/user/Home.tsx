@@ -54,8 +54,8 @@ export const HomePage = () => {
                         flexDirection: 'column',
                         backgroundColor: '#FFF3E3',
                         width: '500px',
-                        right: '100px',
-                        top: '25%',
+                        left: '80%',
+                        top: '5%',
                         borderRadius: '10px',
                         padding: '30px 50px',
                     }}
@@ -73,7 +73,7 @@ export const HomePage = () => {
                         Discover Our New Collection
                     </Text>
                     <Text style={{ fontSize: '18px', fontWeight: '500', lineHeight: '24px', marginTop: '10px' }}>
-                        "Transforming Spaces, Creating Comfort – Discover Your Perfect Furniture with Us!"
+                        "Find Your Strength, Live Your Best Life – Wellness in Every Way, Every Day!"
                     </Text>
                     <Link to="/shop">
                         <Button
@@ -123,7 +123,7 @@ export const HomePage = () => {
                         margin: '0',
                     }}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Fuel Your Fitness, Embrace Your Wellness.
                 </Text>
                 <Row style={{ justifyContent: 'space-around', width: '100%', marginTop: '20px' }}>
                     <Col
