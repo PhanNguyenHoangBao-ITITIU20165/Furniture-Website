@@ -27,9 +27,9 @@ export const assets: any = {
     image14: require('./images/homepage/Image14.png'),
     image15: require('./images/homepage/Image15.png'),
     image16: require('./images/homepage/Image16.png'),
-    bedroom: require('./images/homepage/Bedroom.png'),
-    dining: require('./images/homepage/Dining.png'),
-    living: require('./images/homepage/Living.png'),
+    treadmills: require('./images/homepage/Treadmills.png'),
+    weight: require('./images/homepage/Weight.png'),
+    accessories: require('./images/homepage/Accessories.png'),
     syltherine: require('./images/homepage/Syltherine.png'),
     // product-details-page
     asgaardSofa1: require('./images/product-details-page/AsgaardSofa1.png'),

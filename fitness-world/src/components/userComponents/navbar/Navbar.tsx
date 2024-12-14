@@ -93,7 +93,7 @@ export const Navbar = () => {
 
                 <Col className="navbar_logo" span={6}>
                     <Link to="/">
-                        <img src={assets.logo} alt="logo" width={75} style={{padding: ' 0 0 0 20px'}}/>
+                        <img src={assets.logo} alt="logo" width={70} style={{padding: ' 0 0 0 40px'}}/>
                     </Link>
                 </Col>
 

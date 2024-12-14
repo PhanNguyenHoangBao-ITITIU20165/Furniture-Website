@@ -65,7 +65,7 @@ export const Footer = (props: Props) => {
             <Row gutter={16} style={{ width: '100%', padding: '48px 0' }}>
                 <Col span={6}>
                     <Flex style={{ flexDirection: 'column', alignItems: 'center' }}>
-                        <Image src={assets.logoImage} alt="" preview={false} style={{ width: '80px' }} />
+                        <Image src={assets.logo} alt="" preview={false} style={{ width: '80px' }} />
                         <Text style={{ fontSize: '24px', fontWeight: '700' }}>True WellnessWay</Text>
                         <Text
                             style={{
@@ -75,7 +75,7 @@ export const Footer = (props: Props) => {
                                 marginTop: '20px',
                             }}
                         >
-                            Quarter 6, Thu Duc City, Ho Chi Minh City, Vietnam
+                            Quarter Binh Thanh, Ho Chi Minh City, Vietnam
                         </Text>
                     </Flex>
                 </Col>

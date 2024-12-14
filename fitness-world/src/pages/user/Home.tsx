@@ -54,7 +54,7 @@ export const HomePage = () => {
                         flexDirection: 'column',
                         backgroundColor: '#FFFAA0',
                         width: '500px',
-                        left: '80%',
+                        left: '90%',
                         top: '5%',
                         borderRadius: '10px',
                         padding: '30px 50px',
@@ -137,14 +137,14 @@ export const HomePage = () => {
                         }}
                     >
                         <Image
-                            style={{ borderRadius: '10px' }}
-                            src={assets.dining}
+                            style={{ borderRadius: '10px', width: '200px', height: '200px', objectFit: 'cover' }}
+                            src={assets.treadmills}
                             alt="Banner"
                             preview={{
                                 mask: null,
                             }}
                         />
-                        <p style={{ fontSize: '24px', fontWeight: '600' }}>Dining</p>
+                        <p style={{ fontSize: '24px', fontWeight: '600', color: 'white' }}>Treadmills</p>
                     </Col>
                     <Col
                         style={{
@@ -156,14 +156,14 @@ export const HomePage = () => {
                         }}
                     >
                         <Image
-                            style={{ borderRadius: '10px' }}
-                            src={assets.living}
+                            style={{ borderRadius: '10px', width: '200px', height: '200px', objectFit: 'cover' }}
+                            src={assets.weight}
                             alt="Banner"
                             preview={{
                                 mask: null,
                             }}
                         />
-                        <p style={{ fontSize: '24px', fontWeight: '600' }}>Living</p>
+                        <p style={{ fontSize: '24px', fontWeight: '600', color: 'white' }}>Weight</p>
                     </Col>
                     <Col
                         style={{
@@ -175,16 +175,17 @@ export const HomePage = () => {
                         }}
                     >
                         <Image
-                            style={{ borderRadius: '10px' }}
-                            src={assets.bedroom}
+                            style={{ borderRadius: '10px', width: '200px', height: '200px', objectFit: 'cover' }}
+                            src={assets.accessories}
                             alt="Banner"
                             preview={{
                                 mask: null,
                             }}
                         />
-                        <p style={{ fontSize: '24px', fontWeight: '600' }}>Bedroom</p>
+                        <p style={{ fontSize: '24px', fontWeight: '600', color: 'white' }}>Accessories</p>
                     </Col>
                 </Row>
+
 
                 <Text
                     style={{
