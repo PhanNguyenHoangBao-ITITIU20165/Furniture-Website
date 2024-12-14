@@ -104,56 +104,6 @@ export const ProductDetailsPage = () => {
                 }}
             >
                 <Row style={{ gap: '20px', width: '50%', display:'flex', justifyContent: 'center' }}>
-                    {/* <Flex style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <Row
-                            style={{
-                                width: '80px',
-                                height: '80px',
-                                backgroundColor: customColors.colorBgSecondary,
-                                borderRadius: '10px',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}
-                        >
-                            <Image preview={false} src={assets.asgaardSofa2} />
-                        </Row>
-                        <Row
-                            style={{
-                                width: '80px',
-                                height: '80px',
-                                backgroundColor: customColors.colorBgSecondary,
-                                borderRadius: '10px',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}
-                        >
-                            <Image preview={false} src={assets.asgaardSofa3} />
-                        </Row>
-                        <Row
-                            style={{
-                                width: '80px',
-                                height: '80px',
-                                backgroundColor: customColors.colorBgSecondary,
-                                borderRadius: '10px',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}
-                        >
-                            <Image preview={false} src={assets.asgaardSofa4} />
-                        </Row>
-                        <Row
-                            style={{
-                                width: '80px',
-                                height: '80px',
-                                backgroundColor: customColors.colorBgSecondary,
-                                borderRadius: '10px',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}
-                        >
-                            <Image preview={false} src={assets.asgaardSofa5} />
-                        </Row>
-                    </Flex> */}
                     <Image preview={{ mask: null }} src={productDetail?.image_dir} />
                 </Row>
                 <Flex style={{ flexDirection: 'column', width: '50%' }}>
