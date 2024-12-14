@@ -22,7 +22,7 @@ export const Banner = ({ title }: BannerProps) => {
                     alignItems: 'center',
                 }}
             >
-                <img src={assets.logoImage} alt="Logo" style={{ width: '80px', height: '80px' }} />
+                <img src={assets.logo} alt="Logo" style={{ width: '80px', height: '80px' }} />
                 <Typography style={{ fontSize: '50px', fontWeight: '500', margin: '10px 0' }}>{title}</Typography>
                 <Flex
                     style={{
