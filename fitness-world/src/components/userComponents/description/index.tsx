@@ -40,7 +40,7 @@ export const Description = () => {
                         borderRadius: '15px',
                     }}
                 >
-                    <Image src={assets.asgaardSofa7} preview={{ mask: null }} style={{ width: '600px' }} />
+                    <Image src={assets.image14} preview={{ mask: null }} style={{ width: '600px' }} />
                 </Row>
                 <Row
                     style={{
@@ -51,7 +51,7 @@ export const Description = () => {
                         borderRadius: '15px',
                     }}
                 >
-                    <Image src={assets.asgaardSofa6} preview={{ mask: null }} style={{ width: '600px' }} />
+                    <Image src={assets.image11} preview={{ mask: null }} style={{ width: '600px' }} />
                 </Row>
             </Row>
         </Flex>
