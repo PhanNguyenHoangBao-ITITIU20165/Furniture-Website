@@ -11,7 +11,7 @@ type BannerProps = {
 export const Banner = ({ title }: BannerProps) => {
     return (
         <Flex style={{ position: 'relative' }}>
-            <img style={{ width: '100vw' }} src={assets.background} alt="" />
+            <img style={{ width: '100vw', height: '25vw' }} src={assets.background} alt="" />
             <Flex
                 style={{
                     position: 'absolute',

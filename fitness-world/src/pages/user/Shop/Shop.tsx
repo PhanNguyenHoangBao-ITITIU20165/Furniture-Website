@@ -68,7 +68,7 @@ export const ShopPage = () => {
     useEffect(() => setProducts(productFetch), [productFetch]);
 
     return (
-        <Flex style={{ flexDirection: 'column', alignItems: 'center', width: '100vw', paddingTop: `${navBarHeight}` }}>
+        <Flex style={{ flexDirection: 'column', alignItems: 'center', width: '100vw', paddingTop: `${navBarHeight}`, backgroundColor: 'black'}}>
             <Banner title="Shop" />
             <Row
                 style={{
@@ -154,6 +154,61 @@ export const ShopPage = () => {
                 current={currentPage}
                 total={totalProducts}
                 pageSize={pageSize}
+                itemRender={(page, type, originalElement) => {
+                    if (type === 'page') {
+                        return (
+                            <span
+                                style={{
+                                    padding: '5px 10px',
+                                    border: '2px solid #fffaa0',
+                                    // backgroundColor: currentPage === page ? '#ffbf00' : 'transparent',
+                                    color: currentPage === page ? 'black' : 'white',
+                                    // fontWeight: currentPage === page ? 'bold' : 'normal',
+                                    cursor: 'pointer',
+                                }}
+                            >
+                                {page}
+                            </span>
+                        );
+                    }
+
+                    if (type === 'prev') {
+                        return (
+                            <span
+                                style={{
+                                    padding: '0 0 15px 0',
+                                    color: 'white',
+                                    fontWeight: 'bold',
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                }}
+                            >
+                                ←
+                            </span>
+                        );
+                    }
+
+                    if (type === 'next') {
+                        return (
+                            <span
+                                style={{
+                                    padding: '0 0 15px 0',
+                                    color: 'white',
+                                    fontWeight: 'bold',
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                }}
+                            >
+                                →
+                            </span>
+                        );
+                    }
+                    return originalElement;
+                }}
             />
         </Flex>
     );
