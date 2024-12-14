@@ -66,7 +66,7 @@
 |  
 ## 2. The project we are working on
 
-The fitness trading platform **True-WellnessWay** provides a comprehensive digital marketplace for individuals to buy and sell a wide range of furniture items. It includes various services such as product search, product listings, and online transactions between buyers and sellers.
+
 
 The **FurniScape** project offered a valuable opportunity to leverage modern web development techniques and technologies to address real-world challenges in the furniture trade industry. The team has adopted a robust Model – View – ViewModel (MVVM) architectural pattern, utilizing leading web frameworks to create a comprehensive and user-friendly e-commerce solution for the furniture marketplace.
 
