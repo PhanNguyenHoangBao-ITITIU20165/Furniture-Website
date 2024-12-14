@@ -73,7 +73,7 @@ export const ShopPage = () => {
             <Row
                 style={{
                     width: '100%',
-                    backgroundColor: '#F9F1E7',
+                    backgroundColor: '#ffbf00',
                     padding: '20px 100px',
                     justifyContent: 'space-between',
                     marginBottom: '50px',
@@ -90,7 +90,7 @@ export const ShopPage = () => {
                 </Row>
                 <Row style={{ gap: '40px' }}>
                     <Flex style={{ alignItems: 'center', gap: '10px' }}>
-                        <Text style={{ fontSize: '18px', fontWeight: '500' }}>Category</Text>
+                        <Text style={{ fontSize: '18px', fontWeight: '500'}}>Category</Text>
                         <Select
                             onChange={handleSelectCategory}
                             style={{

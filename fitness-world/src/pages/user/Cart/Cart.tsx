@@ -42,7 +42,7 @@ export const CartPage = () => {
     const Quantity = (props: { id: string; value: number }) => {
         const { id, value } = props;
         return (
-            <Row style={{ fontSize: '18px', justifyContent: 'center', alignItems: 'center', gap: '20px' }}>
+            <Row style={{ fontSize: '18px', justifyContent: 'center', alignItems: 'center', gap: '40px' }}>
                 <Flex
                     style={{
                         width: '20px',
@@ -58,7 +58,7 @@ export const CartPage = () => {
                 >
                     <FontAwesomeIcon icon={faMinus} style={{ fontSize: '14px' }} />
                 </Flex>
-                <Text style={{ fontSize: '16px' }}>{value}</Text>
+                <Text style={{ fontSize: '16px', color:'white' }}>{value}</Text>
                 <Flex
                     style={{
                         width: '20px',
@@ -152,10 +152,11 @@ export const CartPage = () => {
                 width: '100vw',
                 position: 'relative',
                 paddingTop: '50px',
+                backgroundColor: 'black'
             }}
         >
             <Banner title="Cart" />
-            <Flex style={{ width: '70%', gap: '30px', marginTop: '50px' }}>
+            <Flex style={{ width: '70%', gap: '30px', marginTop: '50px', marginBottom:'15px' }}>
                 <Col style={{ width: '70%' }}>
                     <Table
                         pagination={false}
@@ -168,9 +169,10 @@ export const CartPage = () => {
                                         {...props}
                                         style={{
                                             ...props.style,
-                                            backgroundColor: token.colorBgContainer,
+                                            backgroundColor: 'black',
                                             textAlign: 'center',
                                             fontSize: '18px',
+                                            color: 'white',
                                         }}
                                     />
                                 ),
@@ -181,9 +183,10 @@ export const CartPage = () => {
                                         {...props}
                                         style={{
                                             ...props.style,
-                                            backgroundColor: '#fff',
+                                            backgroundColor: 'black',
                                             textAlign: 'center',
                                             fontSize: '16px',
+                                            color:'white',
                                         }}
                                     />
                                 ),
@@ -198,11 +201,12 @@ export const CartPage = () => {
                         flexDirection: 'column',
                         alignItems: 'center',
                         padding: '10px 30px',
-                        backgroundColor: token.colorBgContainer,
+                        backgroundColor: 'black',
                         borderRadius: '10px',
+                        color:'white'
                     }}
                 >
-                    <Text style={{ fontSize: '32px', fontWeight: '600' }}>Cart Totals</Text>
+                    <Text style={{ fontSize: '32px', fontWeight: '600', color:'white' }}>Cart Totals</Text>
                     <Row
                         style={{
                             width: '100%',
@@ -216,6 +220,7 @@ export const CartPage = () => {
                             style={{
                                 fontSize: '18px',
                                 fontWeight: '500',
+                                color:'white'
                             }}
                         >
                             Subtotal
@@ -225,7 +230,7 @@ export const CartPage = () => {
                             style={{
                                 fontSize: '18px',
                                 fontWeight: '500',
-                                color: customColors.colorQuaternaryText,
+                                color:'white',
                             }}
                         >
                             ${cart.totalPrice}.00
@@ -244,6 +249,7 @@ export const CartPage = () => {
                             style={{
                                 fontSize: '18px',
                                 fontWeight: '500',
+                                color:'white'
                             }}
                         >
                             Shipping fee
@@ -253,7 +259,7 @@ export const CartPage = () => {
                             style={{
                                 fontSize: '18px',
                                 fontWeight: '500',
-                                color: customColors.colorQuaternaryText,
+                                color:'white',
                             }}
                         >
                             ${shippingFee}.00
@@ -272,6 +278,7 @@ export const CartPage = () => {
                             style={{
                                 fontSize: '20px',
                                 fontWeight: '500',
+                                color:'white'
                             }}
                         >
                             Total
@@ -299,6 +306,7 @@ export const CartPage = () => {
                                 fontSize: '20px',
                                 fontWeight: '500',
                                 border: `2px solid`,
+                                color:'white'
                             }}
                         >
                             Checkout

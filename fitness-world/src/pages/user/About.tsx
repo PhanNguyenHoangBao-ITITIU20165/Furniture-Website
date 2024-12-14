@@ -25,35 +25,30 @@ export const AboutPage = (props: Props) => {
     ];
 
     return (
-        <Flex style={{ flexDirection: 'column', alignItems: 'center', width: '100vw', paddingTop: `${navBarHeight}` }}>
+        <Flex style={{ flexDirection: 'column', alignItems: 'center', width: '100vw', paddingTop: `${navBarHeight}`, backgroundColor:'black' }}>
             <Banner title="About" />
             <Flex style={{ flexDirection: 'column', gap: '60px', width: '100%', marginTop: '50px' }}>
                 <Flex style={{ justifyContent: 'space-between', alignItems: 'center', padding: '0 100px' }}>
-                    <Image src={assets.company} preview={false} style={{ width: '600px', borderRadius: '10px' }} />
+                    <Image src={assets.banner} preview={false} style={{ width: '600px', borderRadius: '10px' }} />
                     <Flex style={{ flexDirection: 'column', gap: '20px', width: '50%' }}>
-                        <Text style={{ fontSize: '24px', fontWeight: '500' }}>About FurniScape</Text>
-                        <Text style={{ fontSize: '18px', fontWeight: '400', textAlign: 'justify' }}>
-                            Welcome to FurniScape, where our mission is to transform your living spaces into hubs of
-                            comfort and style. Since our inception in 2015, FurniScape has carved a niche in the
-                            furniture market with innovative designs and exceptional customer service. Our slogan,
-                            'Transforming Spaces, Creating Comfort,' encapsulates our commitment to enhancing your home
-                            with furniture that not only looks stunning but feels wonderfully comfortable. We
-                            collaborate with renowned designers and skilled artisans to bring you furniture that stands
-                            the test of time and trends.
+                        <Text style={{ fontSize: '24px', fontWeight: '500', color:'white' }}>About TrueWellnessWay</Text>
+                        <Text style={{ fontSize: '18px', fontWeight: '400', textAlign: 'justify', color:'white' }}>
+                            At True WellnessWay, we believe that wellness is not just a goal but a lifestyle. Our mission is to empower individuals to achieve their fitness and wellness 
+                            aspirations by offering high-quality fitness tools and accessories tailored to every need. Whether you’re a beginner starting your journey or an enthusiast seeking 
+                            to elevate your routine, our carefully curated collection ensures you have the best gear to succeed. True WellnessWay is more than a store; it’s a community 
+                            dedicated to promoting strength, balance, and overall well-being. From state-of-the-art treadmills to versatile weights and essential accessories, we provide 
+                            tools that inspire and support you on your path to a healthier, happier you. Let us be your partner in transforming your wellness journey. Together, we’ll help 
+                            you take confident strides towards achieving your true potential. Welcome to your way, the True WellnessWay!
                         </Text>
                     </Flex>
                 </Flex>
                 <Flex style={{ justifyContent: 'space-between', alignItems: 'center', padding: '0 100px' }}>
                     <Flex style={{ flexDirection: 'column', gap: '20px', width: '45%' }}>
-                        <Text style={{ fontSize: '24px', fontWeight: '500' }}>Our Products and Services</Text>
-                        <Text style={{ fontSize: '18px', fontWeight: '400', textAlign: 'justify' }}>
-                            FurniScape boasts a diverse selection of furniture that encompasses everything needed to
-                            furnish a home or office, from plush sofas and ergonomic office chairs to luxurious beds and
-                            stylish dining sets. Each product is designed with the utmost attention to aesthetics and
-                            practical functionality. Beyond just selling furniture, we offer comprehensive interior
-                            design services that guide customers through the process of envisioning and realizing the
-                            layout and decoration of their spaces. Our team works closely with clients to ensure their
-                            decor reflects their personal style and meets their functional needs.
+                        <Text style={{ fontSize: '24px', fontWeight: '500', color:'white' }}>Our Products and Services</Text>
+                        <Text style={{ fontSize: '18px', fontWeight: '400', textAlign: 'justify', color:'white' }}>
+                            At True WellnessWay, we are committed to providing premium fitness tools and wellness solutions that cater to a variety of needs and goals. Our offerings 
+                            are designed to help you achieve a balanced and healthier lifestyle with ease and convenience. Your journey to wellness is our priority. Explore our 
+                            range of products and services, and let us help you find your true path to health and vitality!
                         </Text>
                     </Flex>
                     <Flex style={{ gap: '20px' }}>
@@ -81,33 +76,24 @@ export const AboutPage = (props: Props) => {
                         style={{ width: '600px', height: '350px', borderRadius: '10px' }}
                     />
                     <Flex style={{ flexDirection: 'column', gap: '20px', width: '50%' }}>
-                        <Text style={{ fontSize: '24px', fontWeight: '500' }}>
+                        <Text style={{ fontSize: '24px', fontWeight: '500', color:'white' }}>
                             Commitment to Quality and Sustainability
                         </Text>
-                        <Text style={{ fontSize: '18px', fontWeight: '400', textAlign: 'justify' }}>
-                            Sustainability is at the core of our manufacturing processes at FurniScape. We are dedicated
-                            to reducing our environmental footprint by utilizing responsibly sourced materials and
-                            implementing eco-friendly manufacturing techniques. Our commitment extends beyond the
-                            materials we use to the methods of our craftsmanship, ensuring that every piece of furniture
-                            is not only durable and safe but also environmentally conscious. We engage in continuous
-                            dialogue with sustainability experts to improve our practices and contribute positively to
-                            the global community. By choosing FurniScape, customers not only invest in superior quality
-                            furniture but also support sustainable practices that benefit the environment.
+                        <Text style={{ fontSize: '18px', fontWeight: '400', textAlign: 'justify', color:'white' }}>
+                            True WellnessWay believes that wellness isn’t just about personal health—it’s about the health of the planet, too. By choosing our products, 
+                            you are not only investing in yourself but also contributing to a more sustainable future for generations to come. Together, let’s build a path 
+                            to true wellness—one that nurtures both you and the environment. Choose True WellnessWay, where quality meets sustainability.
                         </Text>
                     </Flex>
                 </Flex>
                 <Flex style={{ justifyContent: 'space-between', alignItems: 'center', padding: '0 100px' }}>
                     <Flex style={{ flexDirection: 'column', gap: '20px', width: '45%' }}>
-                        <Text style={{ fontSize: '24px', fontWeight: '500' }}>Our Founding and Management Team</Text>
-                        <Text style={{ fontSize: '18px', fontWeight: '400', textAlign: 'justify' }}>
-                            The foundation of FurniScape was laid by a group of visionaries who are seasoned in both the
-                            art of furniture craftsmanship and the intricacies of business management. Our founders
-                            bring over two decades of combined experience in interior design and a robust understanding
-                            of global market dynamics. This rich background has been pivotal in shaping FurniScape’s
-                            ethos and in steering its journey towards becoming a leader in the furniture industry.
-                            Today, our management team continues to drive innovation, overseeing a talented crew that’s
-                            dedicated to upholding the highest standards of furniture production and customer
-                            satisfaction.
+                        <Text style={{ fontSize: '24px', fontWeight: '500', color:'white' }}>Our Founding and Management Team</Text>
+                        <Text style={{ fontSize: '18px', fontWeight: '400', textAlign: 'justify', color:'white' }}>
+                            True WellnessWay is more than just a company—it’s a team of individuals united by a mission to inspire healthier lives. We combine our diverse expertise 
+                            in fitness, technology, sustainability, and business to bring you the best in wellness solutions. Our leadership team is committed to 
+                            continuously evolving our offerings, creating a community of wellness enthusiasts, and delivering an exceptional experience for all our customers. 
+                            At True WellnessWay, we don’t just guide your journey—we walk it with you.
                         </Text>
                     </Flex>
                     <Flex

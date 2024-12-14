@@ -93,35 +93,35 @@ export const CheckoutPage = () => {
     }));
 
     return (
-        <Flex style={{ flexDirection: 'column', alignItems: 'center', width: '100vw', paddingTop: '50px' }}>
+        <Flex style={{ flexDirection: 'column', alignItems: 'center', width: '100vw', paddingTop: '50px', backgroundColor:'black' }}>
             {contextHolder}
             <Banner title="Checkout" />
-            <Text style={{ fontSize: '30px', fontWeight: '600', marginTop: '20px' }}>Billing details</Text>
+            <Text style={{ fontSize: '30px', fontWeight: '600', marginTop: '20px', color:'white' }}>Billing details</Text>
             <Flex style={{ marginTop: '40px', width: '70%' }}>
                 {isAuthenticated && (
                     <Flex vertical style={{ width: '50%' }}>
                         <Flex style={{ marginBottom: '10px' }}>
-                            <Typography style={{ fontSize: '23px', fontWeight: '600' }}>Full Name:</Typography>
-                            <Typography style={{ fontWeight: '400', fontSize: '22px', marginLeft: '14px' }}>
+                            <Typography style={{ fontSize: '23px', fontWeight: '600', color:'white' }}>Full Name:</Typography>
+                            <Typography style={{ fontWeight: '400', fontSize: '22px', marginLeft: '14px', color:'white' }}>
                                 {userInfo.fullname}
                                 {/* Bao Pham */}
                             </Typography>
                         </Flex>
                         <Flex style={{ marginBottom: '10px' }}>
-                            <Typography style={{ fontSize: '23px', fontWeight: '600' }}>Phone Number: </Typography>
-                            <Typography style={{ fontWeight: '400', fontSize: '22px', marginLeft: '14px' }}>
+                            <Typography style={{ fontSize: '23px', fontWeight: '600', color:'white' }}>Phone Number: </Typography>
+                            <Typography style={{ fontWeight: '400', fontSize: '22px', marginLeft: '14px', color:'white' }}>
                                 {userInfo.phone}
                             </Typography>
                         </Flex>
                         <Flex style={{ marginBottom: '10px' }}>
-                            <Typography style={{ fontSize: '23px', fontWeight: '600' }}>Address: </Typography>
-                            <Typography style={{ fontWeight: '400', fontSize: '22px', marginLeft: '14px' }}>
+                            <Typography style={{ fontSize: '23px', fontWeight: '600', color:'white' }}>Address: </Typography>
+                            <Typography style={{ fontWeight: '400', fontSize: '22px', marginLeft: '14px', color:'white' }}>
                                 {userInfo.address}
                             </Typography>
                         </Flex>
                         <Flex style={{ marginBottom: '10px' }}>
-                            <Typography style={{ fontSize: '23px', fontWeight: '600' }}>Country: </Typography>
-                            <Typography style={{ fontWeight: '400', fontSize: '22px', marginLeft: '14px' }}>
+                            <Typography style={{ fontSize: '23px', fontWeight: '600', color:'white' }}>Country: </Typography>
+                            <Typography style={{ fontWeight: '400', fontSize: '22px', marginLeft: '14px', color:'white' }}>
                                 {userInfo.country}
                             </Typography>
                         </Flex>
@@ -132,7 +132,7 @@ export const CheckoutPage = () => {
                     <Form layout="vertical" style={{ width: '70%' }}>
                         <Form.Item
                             label={
-                                <Text style={{ color: '#000', fontWeight: 'bold', fontSize: '16px' }}>
+                                <Text style={{ color:'white', fontWeight: 'bold', fontSize: '16px' }}>
                                     Your full name
                                 </Text>
                             }
@@ -149,11 +149,11 @@ export const CheckoutPage = () => {
                             />
                         </Form.Item>
 
-                        <Form.Item
+                        {/* <Form.Item
                             label={
                                 <Text
                                     style={{
-                                        color: '#000',
+                                        color:'white',
                                         fontWeight: 'bold',
                                         fontSize: '16px',
                                     }}
@@ -169,6 +169,7 @@ export const CheckoutPage = () => {
                                     width: '525px',
                                     height: '50px',
                                     fontSize: '16px',
+                                    backgroundColor:'#fff'
                                 }}
                                 placeholder="Search to Select"
                                 optionFilterProp="children"
@@ -180,13 +181,13 @@ export const CheckoutPage = () => {
                                 }
                                 options={options}
                             />
-                        </Form.Item>
+                        </Form.Item> */}
 
                         <Form.Item
                             label={
                                 <Text
                                     style={{
-                                        color: '#000',
+                                        color:'white',
                                         fontWeight: 'bold',
                                         fontSize: '16px',
                                     }}
@@ -211,7 +212,7 @@ export const CheckoutPage = () => {
                             label={
                                 <Text
                                     style={{
-                                        color: '#000',
+                                        color:'white',
                                         fontWeight: 'bold',
                                         fontSize: '16px',
                                     }}
@@ -236,7 +237,7 @@ export const CheckoutPage = () => {
                             label={
                                 <Text
                                     style={{
-                                        color: '#000',
+                                        color:'white',
                                         fontWeight: 'bold',
                                         fontSize: '16px',
                                     }}
@@ -264,8 +265,9 @@ export const CheckoutPage = () => {
                         width: '50%',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        backgroundColor: '#fff',
+                        backgroundColor: 'black',
                         borderRadius: '10px',
+                        paddingBottom:'15px'
                     }}
                 >
                     <Flex
@@ -282,6 +284,7 @@ export const CheckoutPage = () => {
                             style={{
                                 fontSize: '25px',
                                 fontWeight: '600',
+                                color:'white'
                             }}
                         >
                             Product
@@ -292,6 +295,7 @@ export const CheckoutPage = () => {
                                 fontSize: '25px',
                                 fontWeight: '600',
                                 textAlign: 'right',
+                                color:'white'
                             }}
                         >
                             Price
@@ -343,7 +347,7 @@ export const CheckoutPage = () => {
                             marginTop: '10px',
                         }}
                     >
-                        <Text style={{ fontSize: '18px', fontWeight: '400' }}>Total</Text>
+                        <Text style={{ fontSize: '18px', fontWeight: '400', color:'white' }}>Total</Text>
                         <Text
                             style={{
                                 fontSize: '25px',
@@ -366,7 +370,7 @@ export const CheckoutPage = () => {
                     <Radio.Group onChange={onchangePaymentMethod} value={paymentMethod} defaultValue={paymentMethod}>
                         <Space direction="vertical">
                             <Radio value={'banking'}>
-                                <Typography.Title style={{ margin: '8px 5px' }} level={4}>
+                                <Typography.Title style={{ margin: '8px 5px', color:'white' }} level={4}>
                                     Direct Bank Transfer
                                 </Typography.Title>
                             </Radio>
@@ -383,7 +387,7 @@ export const CheckoutPage = () => {
                             </Text>
 
                             <Radio value={'cash'}>
-                                <Typography.Title style={{ margin: '8px 5px' }} level={4}>
+                                <Typography.Title style={{ margin: '8px 5px', color:'white' }} level={4}>
                                     Cash On Delivery
                                 </Typography.Title>
                             </Radio>
@@ -399,7 +403,7 @@ export const CheckoutPage = () => {
                         </Space>
                     </Radio.Group>
 
-                    <Text style={{ fontSize: '16px', fontWeight: '400', marginTop: '25px', textAlign: 'justify' }}>
+                    <Text style={{ fontSize: '16px', fontWeight: '400', marginTop: '25px', textAlign: 'justify', color:'white' }}>
                         Your personal data will be used to support your experience throughout this website, to manage
                         access to your account, and for other purposes described in our <b>privacy policy</b>.
                     </Text>

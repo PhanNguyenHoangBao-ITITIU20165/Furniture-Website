@@ -46,7 +46,7 @@ export const Footer = (props: Props) => {
                     <Flex style={{ flexDirection: 'column' }}>
                         <Text style={{ fontSize: '25px', fontWeight: '600' }}>Free Shipping</Text>
                         <Text style={{ fontSize: '20px', fontWeight: '500', color: 'white' }}>
-                            Order over $150
+                            Order over $500
                         </Text>
                     </Flex>
                 </Row>

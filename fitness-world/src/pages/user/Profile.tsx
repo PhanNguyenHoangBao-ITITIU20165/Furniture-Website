@@ -92,6 +92,7 @@ export const ProfilePage = () => {
                 width: '100vw',
                 position: 'relative',
                 paddingTop: `${navBarHeight}`,
+                backgroundColor:'black'
             }}
         >
             <Flex style={{ width: '70%', justifyContent: 'space-between', alignItems: 'center', marginTop: '50px' }}>
@@ -107,7 +108,7 @@ export const ProfilePage = () => {
                         }}
                     />
                     <Flex style={{ flexDirection: 'column' }}>
-                        <Text style={{ fontSize: '30px', fontWeight: '600' }}>{userData.fullname}</Text>
+                        <Text style={{ fontSize: '30px', fontWeight: '600', color:'white' }}>{userData.fullname}</Text>
                         <Text style={{ fontSize: '20px', fontWeight: '500', color: customColors.colorQuaternaryText }}>
                             {userData.email}
                         </Text>
@@ -125,7 +126,7 @@ export const ProfilePage = () => {
             </Flex>
             <Flex style={{ width: '70%', marginTop: '50px', flexDirection: 'column' }}>
                 <Flex justify="space-between">
-                    <Text style={{ fontSize: '30px', fontWeight: '500', marginBottom: '20px' }}>Purchase History</Text>
+                    <Text style={{ fontSize: '30px', fontWeight: '500', marginBottom: '20px', color:'white' }}>Purchase History</Text>
                     {/* <Input.Search
                         size="large"
                         placeholder="input search text"

@@ -10,10 +10,10 @@ const { TextArea } = Input;
 
 export const ContactPage = () => {
     return (
-        <Flex style={{ flexDirection: 'column', alignItems: 'center', paddingTop: `${navBarHeight}` }}>
+        <Flex style={{ flexDirection: 'column', alignItems: 'center', paddingTop: `${navBarHeight}`, backgroundColor:'black' }}>
             <Banner title="Contact" />
             <Flex style={{ flexDirection: 'column', alignItems: 'center', marginTop: '50px' }}>
-                <Text style={{ fontSize: '36px', fontWeight: '600' }}>Get In Touch With Us</Text>
+                <Text style={{ fontSize: '36px', fontWeight: '600', color:'white' }}>Get In Touch With Us</Text>
                 <Text
                     style={{
                         fontSize: '16px',
@@ -27,7 +27,7 @@ export const ContactPage = () => {
                 </Text>
                 <Row gutter={100} style={{ marginTop: '50px' }}>
                     <Col>
-                        <Flex style={{ flexDirection: 'column', gap: '30px' }}>
+                        <Flex style={{ flexDirection: 'column', gap: '30px', color:'white' }}>
                             <Row gutter={20} style={{ alignItems: 'center' }}>
                                 <Col>
                                     <Flex
@@ -36,18 +36,18 @@ export const ContactPage = () => {
                                             height: '50px',
                                             justifyContent: 'center',
                                             alignItems: 'center',
-                                            border: '3px solid #000',
+                                            border: '3px solid white',
                                             borderRadius: '100px',
                                         }}
                                     >
-                                        <FontAwesomeIcon icon={faLocationDot} style={{ fontSize: '25px' }} />
+                                        <FontAwesomeIcon icon={faLocationDot} style={{ fontSize: '25px'}} />
                                     </Flex>
                                 </Col>
                                 <Col>
                                     <Flex style={{ flexDirection: 'column' }}>
-                                        <Text style={{ fontSize: '22px', fontWeight: '500' }}>Address</Text>
-                                        <Text style={{ fontSize: '16px', fontWeight: '400' }}>
-                                            236 5th SE Avenue, New York NY10000, United States
+                                        <Text style={{ fontSize: '22px', fontWeight: '500', color:'white' }}>Address</Text>
+                                        <Text style={{ fontSize: '16px', fontWeight: '400', color:'white' }}>
+                                            59 Xa Lo Ha Noi, District 2, Ho Chi Minh City
                                         </Text>
                                     </Flex>
                                 </Col>
@@ -60,7 +60,7 @@ export const ContactPage = () => {
                                             height: '50px',
                                             justifyContent: 'center',
                                             alignItems: 'center',
-                                            border: '3px solid #000',
+                                            border: '3px solid white',
                                             borderRadius: '100px',
                                         }}
                                     >
@@ -69,12 +69,12 @@ export const ContactPage = () => {
                                 </Col>
                                 <Col>
                                     <Flex style={{ flexDirection: 'column' }}>
-                                        <Text style={{ fontSize: '22px', fontWeight: '500' }}>Phone</Text>
-                                        <Text style={{ fontSize: '16px', fontWeight: '400' }}>
-                                            Mobile: +(84) 546-6789
+                                        <Text style={{ fontSize: '22px', fontWeight: '500', color:'white' }}>Phone</Text>
+                                        <Text style={{ fontSize: '16px', fontWeight: '400', color:'white' }}>
+                                            Mobile: +(84) 0915434444
                                         </Text>
-                                        <Text style={{ fontSize: '16px', fontWeight: '400' }}>
-                                            Hotline: +(84) 456-6789
+                                        <Text style={{ fontSize: '16px', fontWeight: '400', color:'white' }}>
+                                            Hotline: +(84) 091543555
                                         </Text>
                                     </Flex>
                                 </Col>
@@ -87,7 +87,7 @@ export const ContactPage = () => {
                                             height: '50px',
                                             justifyContent: 'center',
                                             alignItems: 'center',
-                                            border: '3px solid #000',
+                                            border: '3px solid white',
                                             borderRadius: '100px',
                                         }}
                                     >
@@ -96,13 +96,13 @@ export const ContactPage = () => {
                                 </Col>
                                 <Col>
                                     <Flex style={{ flexDirection: 'column' }}>
-                                        <Text style={{ fontSize: '22px', fontWeight: '500' }}>Working time</Text>
-                                        <Text style={{ fontSize: '16px', fontWeight: '400' }}>
-                                            Monday - Friday: 9:00 - 22:00
+                                        <Text style={{ fontSize: '22px', fontWeight: '500', color:'white' }}>Working time</Text>
+                                        <Text style={{ fontSize: '16px', fontWeight: '400', color:'white' }}>
+                                            Monday - Friday: 9:00 - 17:00
                                         </Text>
-                                        <Text style={{ fontSize: '16px', fontWeight: '400' }}>
+                                        <Text style={{ fontSize: '16px', fontWeight: '400', color:'white' }}>
                                             {' '}
-                                            Saturday - Sunday: 9:00 - 21:00
+                                            Saturday - Sunday: 9:00 - 16:00
                                         </Text>
                                     </Flex>
                                 </Col>
@@ -119,7 +119,7 @@ export const ContactPage = () => {
                                 }
                             >
                                 <Input
-                                    placeholder="David"
+                                    placeholder="Hoang Bao"
                                     style={{
                                         border: `2px solid ${customColors.lightGrayColor}`,
                                         backgroundColor: '#fff',
@@ -143,7 +143,7 @@ export const ContactPage = () => {
                                 }
                             >
                                 <Input
-                                    placeholder="David@gmail.com"
+                                    placeholder="tuchi@gmail.com"
                                     style={{
                                         border: `2px solid ${customColors.lightGrayColor}`,
                                         backgroundColor: '#fff',
