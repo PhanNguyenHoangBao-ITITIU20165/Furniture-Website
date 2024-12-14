@@ -104,7 +104,6 @@ export const CheckoutPage = () => {
                             <Typography style={{ fontSize: '23px', fontWeight: '600', color:'white' }}>Full Name:</Typography>
                             <Typography style={{ fontWeight: '400', fontSize: '22px', marginLeft: '14px', color:'white' }}>
                                 {userInfo.fullname}
-                                {/* Bao Pham */}
                             </Typography>
                         </Flex>
                         <Flex style={{ marginBottom: '10px' }}>
