@@ -80,7 +80,7 @@ export const CartPage = () => {
 
     const Price = (props: { price: number; quantity: number }) => {
         const { price, quantity } = props;
-        return <Text style={{ fontSize: '16px' }}>${price * quantity}.00</Text>;
+        return <Text style={{ fontSize: '16px', color:'white' }}>${price * quantity}.00</Text>;
     };
 
     const dataSource = cart.items.map((item) => {
@@ -152,7 +152,7 @@ export const CartPage = () => {
                 width: '100vw',
                 position: 'relative',
                 paddingTop: '50px',
-                backgroundColor: 'black'
+                backgroundColor: 'black',
             }}
         >
             <Banner title="Cart" />
