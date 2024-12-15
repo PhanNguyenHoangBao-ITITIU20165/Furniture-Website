@@ -103,11 +103,11 @@ export const ProductPageAdmin = () => {
 
                     <Form.Item label="Category" rules={[{ required: true }]} name="category">
                         <Select size="large">
-                            <Select.Option value="Dining Room">Dining Room</Select.Option>
-                            <Select.Option value="Kitchen">Kitchen</Select.Option>
-                            <Select.Option value="Bedroom">Bedroom</Select.Option>
-                            <Select.Option value="Office">Office</Select.Option>
-                            <Select.Option value="Living Room">Living Room</Select.Option>
+                            <Select.Option value="Strength Training Equipment">Strength Training Equipment</Select.Option>
+                            <Select.Option value="Treadmills">Treadmills</Select.Option>
+                            <Select.Option value="Weights">Weights</Select.Option>
+                            <Select.Option value="Accessories">Accessories</Select.Option>
+                            <Select.Option value="Rowing Machine">Rowing Machine</Select.Option>
                         </Select>
                     </Form.Item>
 
