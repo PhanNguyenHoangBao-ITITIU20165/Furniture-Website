@@ -259,17 +259,14 @@ This project is licensed under MIT License. See the [License](https://github.com
 
 For any inquiries of feedback, please contact:
 
-- Pham Gia Bao by **[Email HERE](mailto:ITITIU20166@student.hcmiu.edu.vn)**
+- Phan Nguyen Hoang Bao by **[Email HERE](mailto:ITITIU20165@student.hcmiu.edu.vn)**
 
-- Project Link: [https://github.com/congbangitiu/FurniScape](https://github.com/congbangitiu/FurniScape)
+- Project Link: [https://github.com/congbangitiu/FurniScape]([https://github.com/congbangitiu/FurniScape](https://github.com/PhanNguyenHoangBao-ITITIU20165/TrueWellnessWay/tree/test))
 
 You can also reach out to other team members:
 
-- **[Dao Minh Huy](mailto:ITCSIU21132@student.hcmiu.edu.vn)**
+- **[Huynh Thi Tu Chi](mailto:ITITIU20175@student.hcmiu.edu.vn)**
 
-- **[Nguyen Luan Cong Bang](mailto:ITITIU20163@student.hcmiu.edu.vn)**
-
-- **[Pham Minh Vu](mailto:ITITIU20354@student.hcmiu.edu.vn)**
 
 <!-- ACKNOWLEDGMENTS -->
 
@@ -280,13 +277,3 @@ goals:
 
 - []() Assoc. Prof. Nguyen Van Sinh
 - []() MSc. Nguyen Trung Nghia
-- []() The README.md template from **[othneildrew](https://github.com/othneildrew/Best-README-Template)**
-
-<!-- MARKDOWN LINKS & IMAGES -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/congbangitiu/FurniScape.svg?style=for-the-badge
-[contributors-url]: https://github.com/congbangitiu/FurniScape/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/congbangitiu/FurniScape.svg?style=for-the-badge
-[forks-url]: https://github.com/congbangitiu/FurniScape/network/members
-[issues-shield]: https://img.shields.io/github/issues/congbangitiu/FurniScape.svg?style=for-the-badge
-[issues-url]: https://github.com/congbangitiu/FurniScape/issues
