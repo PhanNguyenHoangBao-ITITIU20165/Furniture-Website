@@ -52,9 +52,24 @@ export const SignUpPage = () => {
 
     return (
         <Row gutter={16} style={{ height: '100vh' }}>
-            <Col span="14">
-                <div className="backgroundSignUp">
-                    <img src={assets.signInSignUpBG} alt="img" />
+            <Col
+                style={{
+                    display: 'flex',
+                    width: '58vw', // Half of the website's width
+                    height: '100vh', // Full height of the viewport
+                    overflow: 'hidden', // Ensure content fits within the column
+                }}
+            >
+                <div className="backgroundSignUp" style={{ width: '100%', height: '100%' }}>
+                    <img
+                        src={assets.banner}
+                        alt=""
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover', // Ensures the image fills the space while maintaining aspect ratio
+                        }}
+                    />
                 </div>
             </Col>
 
@@ -70,7 +85,7 @@ export const SignUpPage = () => {
                         style={{ maxWidth: 350, margin: 'auto' }}
                     >
                         <Link to="/">
-                            <img src={assets.loginLogo} alt="loginLogo" width={190} style={{ marginBottom: '20px' }} />
+                            <img src={assets.logo} alt="loginLogo" width={100} style={{ marginBottom: '20px', marginLeft:'120px' }} />
                         </Link>
 
                         <Form.Item

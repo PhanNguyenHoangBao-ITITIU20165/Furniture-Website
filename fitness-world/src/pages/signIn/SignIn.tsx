@@ -11,6 +11,7 @@ import { userSignIn } from 'src/redux/api/authApi';
 import './signIn.scss';
 import { IUserData } from 'src/redux/api/authSlice';
 import { setSelectedPath } from 'src/redux/navbar';
+import { Banner } from '../../components/userComponents/banner/index';
 
 export interface IUserSignInData {
     email: string;
@@ -50,11 +51,27 @@ export const SignInPage = () => {
 
     return (
         <Row gutter={16} style={{ height: '100vh' }}>
-            <Col style={{ display: 'flex' }} span="14">
-                <div className="backgroundSignIn">
-                    <img src={assets.signInSignUpBG} alt="" />
+            <Col
+                style={{
+                    display: 'flex',
+                    width: '58vw', // Half of the website's width
+                    height: '100vh', // Full height of the viewport
+                    overflow: 'hidden', // Ensure content fits within the column
+                }}
+            >
+                <div className="backgroundSignIn" style={{ width: '100%', height: '100%' }}>
+                    <img
+                        src={assets.banner}
+                        alt=""
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover', // Ensures the image fills the space while maintaining aspect ratio
+                        }}
+                    />
                 </div>
             </Col>
+
 
             <Col span="10" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <div style={{ width: '90%' }}>
@@ -65,7 +82,7 @@ export const SignInPage = () => {
                         style={{ maxWidth: 350, margin: 'auto' }}
                     >
                         <Link to="/">
-                            <img src={assets.loginLogo} alt="loginLogo" width={190} style={{ marginBottom: '20px' }} />
+                            <img src={assets.logo} alt="loginLogo" width={100} style={{ marginBottom: '20px', marginLeft:'120px' }} />
                         </Link>
 
                         <Form.Item name="email" rules={[{ required: true, message: 'Please input your username!' }]}>
