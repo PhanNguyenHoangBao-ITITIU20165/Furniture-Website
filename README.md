@@ -100,8 +100,6 @@ Furthermore, True-WellnessWay will integrate augmented reality (AR) features tha
 - [✔] Database design: 7 tables with achievement BC form.
 - [ ] More to come...
 
-Please see the [open issues](https://github.com/congbangitiu/FurniScape) for a full list of proposed features (
-and known issues).
 
 <!-- Technologies Used -->
 
