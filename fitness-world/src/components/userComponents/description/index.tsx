@@ -18,7 +18,7 @@ export const Description = () => {
                 style={{
                     fontSize: '18px',
                     fontWeight: '400',
-                    color: customColors.colorQuaternaryText,
+                    color: 'white',
                     textAlign: 'justify',
                 }}
             >

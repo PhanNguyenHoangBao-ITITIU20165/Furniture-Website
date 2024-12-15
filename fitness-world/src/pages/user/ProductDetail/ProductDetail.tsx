@@ -33,7 +33,7 @@ export const ProductDetailsPage = () => {
     const dispatch = useDispatch();
 
     const sizes = ['L', 'XL', 'XS'];
-    const colors = ['#816DFA', '#000', '#B88E2F'];
+    const colors = ['#816DFA', '#fff', '#B88E2F'];
 
     const handleSizeClick = (size: string) => {
         setActiveSize(size);
@@ -66,6 +66,7 @@ export const ProductDetailsPage = () => {
                 width: '100vw',
                 paddingTop: `${navBarHeight}`,
                 overflow: 'none',
+                backgroundColor:'black'
             }}
         >
             <Row
@@ -111,6 +112,7 @@ export const ProductDetailsPage = () => {
                         style={{
                             fontSize: '40px',
                             fontWeight: '400',
+                            color:'white'
                         }}
                     >
                         {productDetail?.name}
@@ -166,6 +168,7 @@ export const ProductDetailsPage = () => {
                             marginTop: '10px',
                             width: '100%',
                             textAlign: 'justify',
+                            color:'white'
                         }}
                     >
                         {productDetail?.description}
@@ -312,6 +315,7 @@ export const ProductDetailsPage = () => {
                                 borderRadius: '10px',
                                 fontWeight: '500',
                                 fontSize: '18px',
+                                color:'white'
                             }}
                             className="rating-btn"
                             onClick={() => setIsRating(true)}
