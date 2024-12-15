@@ -11,14 +11,7 @@
     Fitness & Workout<br /><br /> Web Application Development <br />International University - VNU
     <br />
     <br />
-    <a href="https://github.com/congbangitiu/FurniScape">Report Bug</a>
-    ·
-    <a href="https://github.com/congbangitiu/FurniScape">Request Feature</a>
   </h3>
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Issues][issues-shield]][issues-url]
 
 </div>
 
