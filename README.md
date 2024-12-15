@@ -61,16 +61,14 @@
 
 | No. |       Full Name       | Student's ID |              Email               |                 Github account                  |                 Roles                  | Contribution |
 | :-: | :-------------------: | :----------: | :------------------------------: | :---------------------------------------------: | :------------------------------------: | :----------: |
-|  1  |     Pham Gia Bao      | ITITIU20166  | ITITIU20166@student.hcmiu.edu.vn |     [giabao18](https://github.com/giabao18)     | **PROJECT MANAGER** Back-end Developer |     25%      |
-|  2  |     Dao Minh Huy      | ITCSIU21132  | ITCSIU21132@student.hcmiu.edu.vn |    [meowie2k3](https://github.com/meowie2k3)    |           Back-end Developer           |     25%      |
-|  3  | Nguyen Luan Cong Bang | ITITIU20163  | ITITIU20163@student.hcmiu.edu.vn | [congbangitiu](https://github.com/congbangitiu) |          Frond-end Developer           |     25%      |
-|  4  |     Pham Minh Vu      | ITITIU20354  | ITITIU20354@student.hcmiu.edu.vn |      [PMinhVu](https://github.com/PMinhVu)      |          Frond-end Developer           |     25%      |
-
+|  1  |     Huynh Thi Tu Chi      | ITITIU20175  | ITITIU20175@student.hcmiu.edu.vn |     [tuchihuynhxjulie](https://github.com/tuchihuynhxjulie)     | Front-end Developer |     50%      |
+|  2  |     Phan Nguyen Hoang Bao      | ITITIU20165  | ITITIU20165@student.hcmiu.edu.vn |    [PhanNguyenHoangBao-ITITIU20165](https://github.com/PhanNguyenHoangBao-ITITIU20165)    |           Back-end Developer           |     50%      |
+|  
 ## 2. The project we are working on
 
-The furniture trading platform **FurniScape** provides a comprehensive digital marketplace for individuals to buy and sell a wide range of furniture items. It includes various services such as product search, product listings, and online transactions between buyers and sellers.
+The fitness trading platform **True-WellnessWay** provides a comprehensive digital marketplace for individuals to buy and sell a wide range of furniture items. It includes various services such as product search, product listings, and online transactions between buyers and sellers.
 
-The **FurniScape** project offered a valuable opportunity to leverage modern web development techniques and technologies to address real-world challenges in the furniture trade industry. The team has adopted a robust Model – View – ViewModel (MVVM) architectural pattern, utilizing leading web frameworks to create a comprehensive and user-friendly e-commerce solution for the furniture marketplace.
+The **True-WellnessWay** project offered a valuable opportunity to leverage modern web development techniques and technologies to address real-world challenges in the furniture trade industry. The team has adopted a robust Model – View – ViewModel (MVVM) architectural pattern, utilizing leading web frameworks to create a comprehensive and user-friendly e-commerce solution for the furniture marketplace.
 
 ## 3. Goal
 
