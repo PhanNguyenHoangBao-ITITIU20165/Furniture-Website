@@ -261,7 +261,7 @@ For any inquiries of feedback, please contact:
 
 - **[Phan Nguyen Hoang Bao](mailto:ITITIU20165@student.hcmiu.edu.vn)**
 
-- Project Link: [https://github.com/congbangitiu/FurniScape]([https://github.com/congbangitiu/FurniScape](https://github.com/PhanNguyenHoangBao-ITITIU20165/TrueWellnessWay/tree/test))
+- **[Project Link](https://github.com/PhanNguyenHoangBao-ITITIU20165/TrueWellnessWay/tree/test)**
 
 You can also reach out to other team members:
 
