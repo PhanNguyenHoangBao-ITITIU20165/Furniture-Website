@@ -83,14 +83,14 @@ To be short, the project aims achieve these goals:
 
 ## 1. Motivation
 
-The FurniScape project was conceived to address the growing need for a streamlined digital platform that simplifies and
-enhances the furniture trading experience. By leveraging the latest web technologies, the team aims to empower both buyers and sellers with convenient search tools, seamless booking capabilities, and secure transaction processes. The ultimate goal is to create a one-stop destination that modernizes the furniture marketplace, driving greater accessibility and economic opportunities for all participants in the industry.
+The True-WellnessWay project was conceived to address the growing need for a streamlined digital platform that simplifies and
+enhances the fitness trading experience. By leveraging the latest web technologies, the team aims to empower both buyers and sellers with convenient search tools, seamless booking capabilities, and secure transaction processes. The ultimate goal is to create a one-stop destination that modernizes the fitness marketplace, driving greater accessibility and economic opportunities for all participants in the industry.
 
 ## 2. Idea
 
-The core idea behind FurniScape is to create a personalized and data-driven furniture marketplace that caters to the unique preferences and needs of each user. Leveraging the power of modern web technologies, the platform will implement sophisticated recommendation algorithms powered by machine learning to analyze user browsing behavior, purchase history, and preferences, allowing it to suggest furniture items tailored to their individual taste.
+The core idea behind True-WellnessWay is to create a personalized and data-driven fitness marketplace that caters to the unique preferences and needs of each user. Leveraging the power of modern web technologies, the platform will implement sophisticated recommendation algorithms powered by machine learning to analyze user browsing behavior, purchase history, and preferences, allowing it to suggest furniture items tailored to their individual taste.
 
-Furthermore, FurniScape will integrate augmented reality (AR) features that enable users to virtually place furniture items in their own living spaces, facilitating seamless visualization of how the furniture will look and fit in their home environment. By delivering a personalized, data-driven, and community-focused furniture marketplace, FurniScape aims to revolutionize the way people discover, visualize, and purchase furniture for their homes and workspaces.
+Furthermore, True-WellnessWay will integrate augmented reality (AR) features that enable users to virtually place furniture items in their own workout spaces, facilitating seamless visualization of how the fitness will look and fit in their workout environment. By delivering a personalized, data-driven, and community-focused fitness marketplace, True-WellnessWay aims to revolutionize the way people discover, visualize, and purchase fitness for their health and workout spaces.
 
 ## 3. Roadmap
 
