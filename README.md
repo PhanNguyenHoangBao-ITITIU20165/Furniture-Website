@@ -259,7 +259,7 @@ This project is licensed under MIT License. See the [License](https://github.com
 
 For any inquiries of feedback, please contact:
 
-- Phan Nguyen Hoang Bao by **[Email HERE](mailto:ITITIU20165@student.hcmiu.edu.vn)**
+- **[Phan Nguyen Hoang Bao](mailto:ITITIU20165@student.hcmiu.edu.vn)**
 
 - Project Link: [https://github.com/congbangitiu/FurniScape]([https://github.com/congbangitiu/FurniScape](https://github.com/PhanNguyenHoangBao-ITITIU20165/TrueWellnessWay/tree/test))
 
