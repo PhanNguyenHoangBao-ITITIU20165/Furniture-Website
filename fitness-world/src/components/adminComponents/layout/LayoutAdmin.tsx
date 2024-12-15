@@ -355,7 +355,7 @@ export const LayoutAdmin = () => {
                 }}
             >
                 <Link to="/admin">
-                    <img src={assets.logo} alt="logo" width={180} style={{ padding: '26px 0 0 0 ' }} />
+                    <img src={assets.logo} alt="logo" width={60} style={{ padding: '26px 0 0 0 ' }} />
                 </Link>
                 <Flex gap="large" wrap="wrap" style={{ paddingTop: '4px' }}>
                     <ConfigProvider theme={{ components: { Button: { textHoverBg: '#ffffff' } } }}>

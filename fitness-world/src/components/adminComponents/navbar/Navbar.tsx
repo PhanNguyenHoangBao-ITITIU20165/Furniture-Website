@@ -63,9 +63,9 @@ export const NavbarAdmin = () => {
                 }}
             >
                 <Col className="navbar_logo" span={12}>
-                    <Link to="/" >
+                    {/* <Link to="/" >
                         <img src={assets.logo1} alt="logo" width={10} style={{ padding: '0 0 4px 20px' }} />
-                    </Link>
+                    </Link> */}
                 </Col>
 
                 <Col
