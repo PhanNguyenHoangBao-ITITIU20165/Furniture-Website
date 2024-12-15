@@ -338,7 +338,7 @@ export const ProductDetailsPage = () => {
                         style={{
                             fontSize: '24px',
                             fontWeight: tab === 'description' ? '500' : '400',
-                            color: tab === 'description' ? '#000' : customColors.colorQuaternaryText,
+                            color: tab === 'description' ? '#fff' : customColors.colorQuaternaryText,
                             cursor: 'pointer',
                         }}
                         onClick={() => setTab('description')}
@@ -349,7 +349,7 @@ export const ProductDetailsPage = () => {
                         style={{
                             fontSize: '24px',
                             fontWeight: tab === 'reviews' ? '500' : '400',
-                            color: tab === 'reviews' ? '#000' : customColors.colorQuaternaryText,
+                            color: tab === 'reviews' ? '#fff' : customColors.colorQuaternaryText,
                             cursor: 'pointer',
                         }}
                         onClick={() => setTab('reviews')}
