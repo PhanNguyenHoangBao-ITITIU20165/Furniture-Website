@@ -41,24 +41,24 @@ export const OrderListPageAdmin = () => {
                 width: '20%',
                 filters: [
                     {
-                        text: 'Dining Room',
-                        value: 'Dining Room',
+                        text: 'Strength Training Equipment',
+                        value: 'Strength Training Equipment',
                     },
                     {
-                        text: 'Kitchen',
-                        value: 'Kitchen',
+                        text: 'Treadmills',
+                        value: 'Treadmills',
                     },
                     {
-                        text: 'Bedroom',
-                        value: 'Bedroom',
+                        text: 'Weights',
+                        value: 'Weights',
                     },
                     {
-                        text: 'Office',
-                        value: 'Office',
+                        text: 'Accessories',
+                        value: 'Accessories',
                     },
                     {
-                        text: 'Living Room',
-                        value: 'Living Room',
+                        text: 'Rowing Machine',
+                        value: 'Rowing Machine',
                     },
                 ],
                 onFilter: (value, record) => record.category.indexOf(value as string) === 0,

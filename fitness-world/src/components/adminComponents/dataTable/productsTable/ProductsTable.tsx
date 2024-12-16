@@ -57,129 +57,126 @@ export const ProductsTable = ({ productsList }: IProductsTablePropsType) => {
     const searchInput = useRef<InputRef>(null);
 
     // Update Product Image
+    // Opens the modal for updating a product's image.
     const handleOpenUpdateImageModal = (key: React.Key, id: string) => {
-        setCurrentId(id);
-        setIsModalUpdateImageVisible(true);
+        setCurrentId(id); // Set the current product ID to be updated.
+        setIsModalUpdateImageVisible(true); // Make the "Update Image" modal visible.
     };
 
+    // Closes the modal for updating a product's image and resets related state variables.
     const handleCloseUpdateImageModal = () => {
-        setIsModalUpdateImageVisible(false);
-        setCurrentId(null);
-        setUpLoadImage(null);
-        setImageUrl(undefined);
+        setIsModalUpdateImageVisible(false); // Hide the modal.
+        setCurrentId(null); // Clear the current product ID.
+        setUpLoadImage(null); // Reset the uploaded image state.
+        setImageUrl(undefined); // Clear the image preview URL.
     };
 
+    // Validates the uploaded image file and sets it for further processing.
     const handleUpload = (image: File) => {
-        // Perform any necessary validations here
-        const isJpgOrPng = image.type === 'image/jpeg' || image.type === 'image/png';
+        const isJpgOrPng = image.type === 'image/jpeg' || image.type === 'image/png'; // Check if the file type is JPG or PNG.
         if (!isJpgOrPng) {
-            message.error('You can only upload JPG/PNG file!');
+            message.error('You can only upload JPG/PNG file!'); // Show an error message for invalid file types.
             return false;
         }
-        // Allow upload
-        setUpLoadImage(image);
-
-        return true;
+        setUpLoadImage(image); // Set the uploaded image for processing.
+        return true; // Indicate successful validation.
     };
 
+    // Handles custom upload logic and generates a preview URL for the uploaded image.
     const handleCustomUpload = (file: File | Blob | string) => {
-        // Simulate upload (replace with actual upload logic)
-        if (file instanceof File) {
-            const reader = new FileReader();
+        if (file instanceof File) { // Ensure the input is a file.
+            const reader = new FileReader(); // Create a FileReader for reading the file.
             reader.onload = () => {
-                setImageUrl(reader.result as string);
+                setImageUrl(reader.result as string); // Set the preview URL for the uploaded image.
             };
-            reader.readAsDataURL(file);
+            reader.readAsDataURL(file); // Read the file as a data URL.
         }
     };
 
-    // const handleSaveButtonClick = () => {
-    //     if (uploadImage !== undefined && currentId !== null) {
-    //         dispatch(updateProductImage({ image_dir: uploadImage, id: currentId }));
-    //     }
-    //     setImageUrl(undefined);
-    //     handleCloseUpdateImageModal();
-    // };
-
+    // Saves the updated product image by dispatching a Redux action and closes the modal.
     const handleSaveButtonClick = () => {
         if (uploadImage !== undefined && currentId !== null) {
-            dispatch(updateProductImage({ image_dir: uploadImage, id: currentId }));
+            dispatch(updateProductImage({ image_dir: uploadImage, id: currentId })); // Dispatch the image update action.
         }
-
-        message.success('Product Image updated successfully');
-        setImageUrl(undefined);
-        handleCloseUpdateImageModal();
+        message.success('Product Image updated successfully'); // Show a success message.
+        setImageUrl(undefined); // Clear the image preview URL.
+        handleCloseUpdateImageModal(); // Close the modal and reset states.
     };
 
-    // Update Product Information
+    // Opens the modal for updating a product's information and pre-fills the form with current data.
     const handleOpenUpdateInfoModal = (data: IProductsTableType) => {
-        setCurrentId(data.id);
-        form.setFieldsValue(data);
-        setCurrentProductData(data);
-        setIsModalUpdateInfoVisible(true);
+        setCurrentId(data.id); // Set the current product ID to be updated.
+        form.setFieldsValue(data); // Populate the form with the selected product's data.
+        setCurrentProductData(data); // Set the current product data.
+        setIsModalUpdateInfoVisible(true); // Show the "Update Information" modal.
     };
 
+    // Closes the modal for updating product information and resets related state variables.
     const handleCloseUpdateInfoModal = () => {
-        form.resetFields();
-        setCurrentProductData(null);
-        setIsModalUpdateInfoVisible(false);
+        form.resetFields(); // Reset the form fields to default values.
+        setCurrentProductData(null); // Clear the current product data.
+        setIsModalUpdateInfoVisible(false); // Hide the modal.
     };
 
+    // Saves the updated product information by dispatching a Redux action after form validation.
     const handleSave = async () => {
         try {
             if (currentId !== null) {
-                // Logic to update product information (replace with actual implementation)
-                const values: any = await form.validateFields(); // Validate and get form values
+                const values: any = await form.validateFields(); // Validate form fields and retrieve values.
                 const data: IUpdateProduct = {
                     id: currentId,
                     name: values.name,
                     price: values.price,
                     category: values.category,
                     description: values.description,
-                    discount: undefined,
+                    discount: undefined, // Discount is left undefined (optional).
                     status: values.status,
-                    quantity: Number(values.quantity),
-                    updatedAt: undefined,
+                    quantity: Number(values.quantity), // Convert quantity to a number.
+                    updatedAt: undefined, // UpdatedAt is left undefined (optional).
                 };
-                dispatch(updateProduct(data));
+                dispatch(updateProduct(data)); // Dispatch the product update action.
             }
-            message.success('Product information updated successfully');
-            setIsModalUpdateInfoVisible(false);
-            setCurrentProductData(null);
+            message.success('Product information updated successfully'); // Show a success message.
+            setIsModalUpdateInfoVisible(false); // Close the modal.
+            setCurrentProductData(null); // Clear the current product data.
         } catch (error) {
-            console.error('Validation error:', error);
+            console.error('Validation error:', error); // Log validation errors, if any.
         }
     };
 
-    // search Functions
+    // Handles search within a specific column of the table.
     const handleSearch = (selectedKeys: string[], confirm: FilterDropdownProps['confirm'], dataIndex: DataIndex) => {
-        confirm();
-        setSearchText(selectedKeys[0]);
-        setSearchedColumn(dataIndex);
+        confirm(); // Confirm the search action.
+        setSearchText(selectedKeys[0]); // Set the search text to the first selected key.
+        setSearchedColumn(dataIndex); // Set the column being searched.
     };
 
+    // Resets the search filter for the table and clears the search state.
     const handleReset = (clearFilters: () => void, confirm: FilterDropdownProps['confirm']) => {
-        clearFilters();
-        setSearchText('');
-        setSearchedColumn('');
-        confirm();
+        clearFilters(); // Clear the applied filters.
+        setSearchText(''); // Reset the search text.
+        setSearchedColumn(''); // Reset the searched column.
+        confirm(); // Confirm the reset action.
     };
 
+
+    // Function to define column properties for searchable columns
     const getColumnSearchProps = (dataIndex: DataIndex): TableColumnType<IProductsTableType> => ({
+        // Define the filter dropdown for searching
         filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters, close }) => (
             <div style={{ padding: 8 }} onKeyDown={(e) => e.stopPropagation()}>
                 <Input
-                    ref={searchInput}
-                    placeholder={`Search ${dataIndex}`}
-                    value={selectedKeys[0]}
-                    onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
-                    onPressEnter={() => handleSearch(selectedKeys as string[], confirm, dataIndex)}
+                    ref={searchInput} // Reference for auto-selecting the input field
+                    placeholder={`Search ${dataIndex}`} // Placeholder for search input
+                    value={selectedKeys[0]} // Current search value
+                    onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])} // Update search value
+                    onPressEnter={() => handleSearch(selectedKeys as string[], confirm, dataIndex)} // Trigger search on pressing Enter
                     style={{ marginBottom: 8, display: 'block' }}
                 />
                 <Space>
                     <Button
                         type="primary"
-                        onClick={() => handleSearch(selectedKeys as string[], confirm, dataIndex)}
+                        onClick={() => handleSearch(selectedKeys as string[], confirm, dataIndex)} // Trigger search on button click
                         icon={<SearchOutlined />}
                         size="small"
                         style={{ width: 90 }}
@@ -188,7 +185,7 @@ export const ProductsTable = ({ productsList }: IProductsTablePropsType) => {
                     </Button>
                     <Button
                         onClick={() => {
-                            clearFilters && handleReset(clearFilters, confirm);
+                            clearFilters && handleReset(clearFilters, confirm); // Reset filters
                         }}
                         size="small"
                         style={{ width: 90 }}
@@ -199,9 +196,9 @@ export const ProductsTable = ({ productsList }: IProductsTablePropsType) => {
                         type="link"
                         size="small"
                         onClick={() => {
-                            confirm({ closeDropdown: false });
-                            setSearchText((selectedKeys as string[])[0]);
-                            setSearchedColumn(dataIndex);
+                            confirm({ closeDropdown: false }); // Apply filter but keep dropdown open
+                            setSearchText((selectedKeys as string[])[0]); // Set search text
+                            setSearchedColumn(dataIndex); // Set the searched column
                         }}
                     >
                         Filter
@@ -210,56 +207,60 @@ export const ProductsTable = ({ productsList }: IProductsTablePropsType) => {
                         type="link"
                         size="small"
                         onClick={() => {
-                            close();
+                            close(); // Close the dropdown
                         }}
                     >
-                        close
+                        Close
                     </Button>
                 </Space>
             </div>
         ),
+        // Icon to indicate filtered state
         filterIcon: (filtered: boolean) => <SearchOutlined style={{ color: filtered ? '#1677ff' : undefined }} />,
+        // Filtering logic for the column
         onFilter: (value, record) =>
             record[dataIndex]
                 .toString()
                 .toLowerCase()
                 .includes((value as string).toLowerCase()),
+        // Focus the input when dropdown is opened
         onFilterDropdownOpenChange: (visible) => {
             if (visible) {
                 setTimeout(() => searchInput.current?.select(), 100);
             }
         },
+        // Highlight the searched text in the column
         render: (text) =>
             searchedColumn === dataIndex ? (
                 <Highlighter
                     highlightStyle={{ backgroundColor: '#ffc069', padding: 0 }}
-                    searchWords={[searchText]}
+                    searchWords={[searchText]} // Words to highlight
                     autoEscape
-                    textToHighlight={text ? text.toString() : ''}
+                    textToHighlight={text ? text.toString() : ''} // Text to render
                 />
             ) : (
                 text
             ),
     });
 
+    // Column definitions for the table
     const columns: TableColumnsType<IProductsTableType> = [
         {
-            title: 'Product Image',
-            dataIndex: 'image_dir',
+            title: 'Product Image', // Column header
+            dataIndex: 'image_dir', // Data key
             key: 'image_dir',
             render: (text, record) =>
                 record.image_dir ? (
                     <img
-                        src={record.image_dir}
+                        src={record.image_dir} // Display product image
                         key={record.image_dir}
                         alt={record.name}
-                        style={{ width: '50px', height: '50px' }}
+                        style={{ width: '50px', height: '50px' }} // Image styling
                     />
                 ) : (
-                    // <a>{record.image_dir}</a>
-                    <Spin />
+                    <Spin /> // Show spinner if no image is available
                 ),
-            fixed: 'left',
+            fixed: 'left', // Fix the column to the left
             width: 150,
         },
         {
@@ -268,7 +269,7 @@ export const ProductsTable = ({ productsList }: IProductsTablePropsType) => {
             key: 'name',
             fixed: 'left',
             width: 150,
-            ...getColumnSearchProps('name'),
+            ...getColumnSearchProps('name'), // Enable search functionality for this column
         },
         {
             title: 'Product Id',
@@ -281,28 +282,14 @@ export const ProductsTable = ({ productsList }: IProductsTablePropsType) => {
             dataIndex: 'category',
             key: 'category',
             width: 150,
-            filters: [
-                {
-                    text: 'Strength Training Equipment',
-                    value: 'Strength Training Equipment',
-                },
-                {
-                    text: 'Treadmills',
-                    value: 'Treadmills',
-                },
-                {
-                    text: 'Weights',
-                    value: 'Weights',
-                },
-                {
-                    text: 'Accessories',
-                    value: 'Accessories',
-                },
-                {
-                    text: 'Rowing Machine',
-                    value: 'Rowing Machine',
-                },
+            filters: [ // Dropdown filters for categories
+                { text: 'Strength Training Equipment', value: 'Strength Training Equipment' },
+                { text: 'Treadmills', value: 'Treadmills' },
+                { text: 'Weights', value: 'Weights' },
+                { text: 'Accessories', value: 'Accessories' },
+                { text: 'Rowing Machine', value: 'Rowing Machine' },
             ],
+            // Filter logic for categories
             onFilter: (value, record) => record.category.indexOf(value as string) === 0,
         },
         {
@@ -310,45 +297,40 @@ export const ProductsTable = ({ productsList }: IProductsTablePropsType) => {
             dataIndex: 'price',
             key: 'price',
             width: 150,
-            render: (text) => `$${text}`,
-            sorter: (a, b) => Number(a.price) - Number(b.price),
+            render: (text) => `$${text}`, // Format the price with a dollar sign
+            sorter: (a, b) => Number(a.price) - Number(b.price), // Enable sorting by price
         },
         {
             title: 'Quantity',
             dataIndex: 'quantity',
             key: 'quantity',
             width: 100,
-            sorter: (a, b) => a.quantity - b.quantity,
+            sorter: (a, b) => a.quantity - b.quantity, // Enable sorting by quantity
         },
         {
             title: 'Status',
             dataIndex: 'status',
             key: 'status',
             width: 100,
-            filters: [
-                {
-                    text: 'New',
-                    value: 'New',
-                },
-                {
-                    text: 'Discount',
-                    value: 'Discount',
-                },
+            filters: [ // Dropdown filters for status
+                { text: 'New', value: 'New' },
+                { text: 'Discount', value: 'Discount' },
             ],
+            // Filter logic for status
             onFilter: (value, record) => record.category.indexOf(value as string) === 0,
         },
         {
             title: 'Create At',
             dataIndex: 'createdAt',
             key: 'createdAt',
-            sorter: (a, b) => sortedDate(a.createdAt, b.createdAt),
+            sorter: (a, b) => sortedDate(a.createdAt, b.createdAt), // Sorting by creation date
             width: 150,
         },
         {
             title: 'Update At',
             dataIndex: 'updatedAt',
             key: 'updatedAt',
-            sorter: (a, b) => sortedDate(a.updatedAt, b.updatedAt),
+            sorter: (a, b) => sortedDate(a.updatedAt, b.updatedAt), // Sorting by update date
             width: 150,
         },
         {
@@ -356,6 +338,7 @@ export const ProductsTable = ({ productsList }: IProductsTablePropsType) => {
             key: 'operation',
             fixed: 'right',
             width: 150,
+            // Render action buttons for each row
             render: (_, record) => (
                 <Space>
                     <a onClick={() => handleOpenUpdateImageModal(record.key, record.id)}>Update Image</a>
@@ -365,24 +348,25 @@ export const ProductsTable = ({ productsList }: IProductsTablePropsType) => {
         },
     ];
 
+    // Map product data into table format
     const data: IProductsTableType[] = [];
-
     productsList.map((product, index) => {
         data.push({
-            key: index,
+            key: index, // Unique key for each row
             id: product.id,
             name: product.name,
             price: product.price,
             category: product.category,
             image_dir: product.image_dir,
             description: product.description,
-            discount: undefined,
+            discount: undefined, // Placeholder for discount
             status: product.status,
             quantity: product.quantity,
             createdAt: product.createdAt,
             updatedAt: product.updatedAt,
         });
     });
+
 
     return (
         <>

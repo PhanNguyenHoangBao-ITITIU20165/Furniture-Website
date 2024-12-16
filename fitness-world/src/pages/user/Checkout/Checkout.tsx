@@ -332,7 +332,7 @@ export const CheckoutPage = () => {
                                 >
                                     {`${item.name} x ${item.quantity}`}
                                 </Text>
-                                <Text style={{ fontSize: '16px', fontWeight: '400', textAlign: 'right' }}>
+                                <Text style={{ fontSize: '16px', fontWeight: '400', textAlign: 'right', color:'white' }}>
                                     ${Number(item.price) * Number(item.quantity)}
                                 </Text>
                             </>
