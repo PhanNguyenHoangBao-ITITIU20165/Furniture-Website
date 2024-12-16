@@ -1,56 +1,81 @@
-const { User } = require("../models");
-const bcryptjs = require("bcryptjs");
-const errorHandler = require("../utils/error");
-const jwt = require("jsonwebtoken");
-const nodemailer = require("nodemailer");
+const { User } = require("../models"); // Import the User model for database interaction.
+const bcryptjs = require("bcryptjs"); // Library for password hashing and verification.
+const errorHandler = require("../utils/error"); // Custom error handler for managing errors.
+const jwt = require("jsonwebtoken"); // Library for generating and verifying JWT tokens.
+const nodemailer = require("nodemailer"); // Library for sending emails (not used in these functions).
 
-
+// Signup function: Handles user registration
 const signup = async (req, res, next) => {
   try {
+    // Extract user details from the request body
     const { email, fullname, phone, password, address, role, country } = req.body;
-    // console.log(req.body);
-    const hashPassword = bcryptjs.hashSync(password, 10);
-    //console.log(email, username, password, role);
+
+    // Hash the user's password for secure storage
+    const hashPassword = bcryptjs.hashSync(password, 10); // The number "10" is the salt rounds for hashing.
+
+    // Check if the user already exists by email, and create a new user if not
     const [newUser, created] = await User.findOrCreate({
-      where: { email },
+      where: { email }, // Check if the email already exists
       defaults: {
-        fullname: fullname || username,
+        fullname: fullname || username, // Fallback to `username` if `fullname` is not provided
         phone: phone,
-        password: hashPassword,
+        password: hashPassword, // Store the hashed password
         address: address,
         country: country,
-        role: role || "user",
+        role: role || "user", // Default role is "user" if not specified
       },
     });
+
+    // If a new user was created, generate a JWT token and return it in a cookie
     if (created) {
-      // run login go return token
-      const token = jwt.sign({ id: newUser.id }, process.env.JWT_SECRET);
-      res.cookie("access_token", token, { httpOnly: true }).status(201).json({
-        newUser,
-        cookie: token,
-      });
-    } else return res.status(400).json({ msg: "User already existed" });
-    //res.status(201).json(newUser);
+      const token = jwt.sign({ id: newUser.id }, process.env.JWT_SECRET); // Sign a JWT with the user's ID
+      res.cookie("access_token", token, { httpOnly: true }) // Store the token in a secure, HttpOnly cookie
+        .status(201)
+        .json({
+          newUser, // Send the newly created user as part of the response
+          cookie: token, // Include the token in the response for debugging (optional)
+        });
+    } else {
+      // If the user already exists, return a 400 error
+      return res.status(400).json({ msg: "User already existed" });
+    }
   } catch (err) {
-    // console.log(err);
+    // Pass any errors to the next middleware for centralized error handling
     next(err);
   }
 };
 
+// Signin function: Handles user login
 const signin = async (req, res, next) => {
-  const { email, password } = req.body;
-  // console.log(req.body);
+  const { email, password } = req.body; // Extract email and password from the request body.
+
   try {
+    // Check if a user with the provided email exists in the database
     const validUser = await User.findOne({ where: { email } });
-    if (!validUser) return next(errorHandler(404, "User not found!"));
+    if (!validUser) {
+      // If the user is not found, return a 404 error
+      return next(errorHandler(404, "User not found!"));
+    }
+
+    // Compare the provided password with the hashed password in the database
     const validPassword = bcryptjs.compareSync(password, validUser.password);
-    if (!validPassword) return next(errorHandler(401, "Wrong password!"));
-    const token = jwt.sign({ id: validUser.id }, process.env.JWT_SECRET);
-    res.cookie("access_token", token, { httpOnly: true }).status(200).json({
-      validUser,
-      cookie: token,
-    });
+    if (!validPassword) {
+      // If the passwords don't match, return a 401 error
+      return next(errorHandler(401, "Wrong password!"));
+    }
+
+    // Generate a JWT token for the authenticated user
+    const token = jwt.sign({ id: validUser.id }, process.env.JWT_SECRET); // Sign a JWT with the user's ID
+
+    // Store the token in a secure, HttpOnly cookie and respond with the user details
+    res.cookie("access_token", token, { httpOnly: true }) // Store the token in a cookie
+      .status(200)
+      .json({
+        validUser, // Send the authenticated user as part of the response
+        cookie: token, // Include the token in the response for debugging (optional)
+      });
   } catch (error) {
+    // Pass any errors to the next middleware for centralized error handling
     console.log(error);
     next(error);
   }
