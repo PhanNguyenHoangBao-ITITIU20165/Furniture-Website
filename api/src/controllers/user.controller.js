@@ -1,81 +1,69 @@
-const { User } = require("../models");
-const { getUserId } = require("../utils/verifyToken");
-const jwt = require("jsonwebtoken");
+const { User } = require("../models"); // Import the User model for database interactions.
+const { getUserId } = require("../utils/verifyToken"); // Utility function to decode and verify the token to extract the user ID.
+const jwt = require("jsonwebtoken"); // Library for working with JSON Web Tokens.
 
+// Function to retrieve user details
 const getUser = async (req, res, next) => {
   try {
-    const jwt = req.cookies.access_token || req.headers["authorization"];
-    var id = getUserId(jwt);
-    const finduser = await User.findByPk(id);
-    if (!finduser) return res.status(404).json({ msg: "User not found" });
-    return res.status(200).json(finduser);
+    const jwtToken = req.cookies.access_token || req.headers["authorization"]; // Extract JWT token from cookies or headers.
+    var id = getUserId(jwtToken); // Extract the user ID from the token using the utility function.
+    const finduser = await User.findByPk(id); // Find the user by primary key (ID).
+    if (!finduser) return res.status(404).json({ msg: "User not found" }); // If user is not found, return a 404 error.
+    return res.status(200).json(finduser); // Return the user details with status 200.
   } catch (error) {
-    console.log(error);
-    next(error);
+    console.log(error); // Log the error for debugging purposes.
+    next(error); // Pass the error to the error-handling middleware.
   }
 };
 
+// Function to update user details
 const updateUser = async (req, res, next) => {
   try {
-    var id = req.user.id;
+    var id = req.user.id; // Extract the user ID from the authenticated request.
     const {
-      // firstname,
-      // surname,
-      // phone,
-      // email,
-      // jobTitle,
-      // employer,
-      // citymunicipality,
-      // country,
-      fullname,
-      phone,
-      email,
-      address,
-      country
-    } = req.body;
+      fullname, // User's full name.
+      phone,    // User's phone number.
+      email,    // User's email address.
+      address,  // User's address.
+      country,  // User's country.
+    } = req.body; // Extract updated details from the request body.
 
-    const finduser = await User.findByPk(id);
-    if (!finduser) return res.status(404).json({ msg: "User not found" });
+    const finduser = await User.findByPk(id); // Find the user by ID.
+    if (!finduser) return res.status(404).json({ msg: "User not found" }); // If user is not found, return a 404 error.
 
-    // var fullName = null;
-    // if (surname && firstname) {
-    //   fullName = firstname + " " + surname;
-    // }
-
+    // Update user fields. If a field is not provided, keep the current value.
     finduser.set({
       fullname: fullname || finduser.fullname,
-      // firstname: firstname || finduser.firstname,
-      // surname: surname || finduser.surname,
       phone: phone || finduser.phone,
       email: email || finduser.email,
       address: address || finduser.address,
-      // jobTitle: jobTitle || finduser.jobTitle,
-      // employer: employer || finduser.employer,
-      // citymunicipality: citymunicipality || finduser.citymunicipality,
       country: country || finduser.country,
     });
-    await finduser.save();
 
-    console.log("User update information:\nID: " + id);
-    console.log(req.body);
-    return res.status(200).json({ msg: "User's information updated" });
+    await finduser.save(); // Save the updated user details to the database.
+
+    console.log("User update information:\nID: " + id); // Log the updated user ID for debugging.
+    console.log(req.body); // Log the request body for debugging.
+
+    return res.status(200).json({ msg: "User's information updated" }); // Return a success message.
   } catch (error) {
-    console.log(error);
-    next(error);
+    console.log(error); // Log the error for debugging purposes.
+    next(error); // Pass the error to the error-handling middleware.
   }
 };
 
+// Function to retrieve all users (Admin functionality)
 const getAllUsers = (req, res, next) => {
-  User.findAll()
+  User.findAll() // Fetch all users from the database.
     .then((users) => {
-      res.status(200).json(users);
+      res.status(200).json(users); // Return the list of users with status 200.
     })
     .catch((error) => {
-      next(error);
+      next(error); // Pass any errors to the error-handling middleware.
     });
-}
+};
 
-
+// Export the functions for use in other parts of the application.
 module.exports = { updateUser, getUser, getAllUsers };
-//fsmegasale15
-//sieutuyet20
+
+// Note: The commented strings (e.g., //fsmegasale15) appear to be unrelated or placeholders.
