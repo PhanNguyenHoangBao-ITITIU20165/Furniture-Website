@@ -122,7 +122,7 @@ Furthermore, True-WellnessWay will integrate augmented reality (AR) features tha
 
 - **Product Listing and Details:** Users can browse and view detailed information about products.
 
-- **Patient Dashboard**: When the user logs in with the patient's account, this page will appear to show all the
+- **Admin Dashboard**: When the user logs in with the patient's account, this page will appear to show all the
   operations related to them, including their recent healing sessions.
 
 - **Add to Cart and Checkout:** Users can add products to their cart and complete the purchase process.
