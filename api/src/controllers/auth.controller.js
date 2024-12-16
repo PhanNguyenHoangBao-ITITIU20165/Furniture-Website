@@ -59,7 +59,7 @@ const signin = async (req, res, next) => {
 const transporter = nodemailer.createTransport({
   service: "hotmail",
   auth: {
-    user: "FurniScape@hotmail.com",
+    user: "TrueWellnessWay@hotmail.com",
     pass: "123asdASD",
   },
 });
